@@ -1,0 +1,11 @@
+{
+  "name": "letanloc",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Le Tan Loc",
+  "license": "ISC"
+}
