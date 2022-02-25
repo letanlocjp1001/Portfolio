@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { images } from '../../constants'
 
 import './Work.scss'
@@ -37,7 +37,7 @@ const listWorks = [
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
-  const [filterWork, setFilterWork] = useState([])
+  const [filterWork, setFilterWork] = useState(listWorks)
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item)
@@ -130,4 +130,4 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work')
+export default AppWrap(MotionWrap(Work, 'app__works'), 'work', 'app__primarybg')
