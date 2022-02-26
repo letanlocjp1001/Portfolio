@@ -61,7 +61,7 @@
 
   .badge-cmp,
   .tag-cmp {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
@@ -73,6 +73,7 @@
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;
+    width: auto;
 
     p {
       width: 100%;
@@ -102,9 +103,10 @@
   justify-content: space-evenly;
   align-items: flex-start;
   height: 100%;
-  margin-left: 1rem;
+  // margin-left: 1rem;
 
   div {
+    position: relative;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -121,19 +123,46 @@
   // circles with different height & width
 
   div:nth-child(1) {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    top: 1rem;
+    left: -32rem;
   }
 
   div:nth-child(2) {
-    margin: 1.75rem;
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
+    top: -10.5rem;
+    left: -20rem;
   }
 
   div:nth-child(3) {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
+    top: -13.5rem;
+    left: -8rem;
+  }
+  div:nth-child(4) {
+    width: 90px;
+    height: 90px;
+    top: -12rem;
+    left: 0rem;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+  div:nth-child(5) {
+    width: 90px;
+    height: 90px;
+    top: -8rem;
+    left: 2rem;
+  }
+  div:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    top: -6rem;
+    left: 0rem;
   }
 
   @media screen and (min-width: 2000px) {
@@ -160,6 +189,7 @@
     margin-left: 0;
 
     div {
+      position: none;
       margin: 1rem;
     }
   }
@@ -175,7 +205,7 @@
   position: relative;
 
   img {
-    width: 100%;
+    width: 90%;
     object-fit: contain;
     z-index: 1;
   }
