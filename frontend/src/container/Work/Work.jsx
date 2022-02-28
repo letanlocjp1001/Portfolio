@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
+
 import { motion } from 'framer-motion'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
@@ -9,7 +10,8 @@ import './Work.scss'
 
 const listWorks = [
   {
-    title: 'Modern UI/UX Website',
+    id: 1,
+    title: 'IT19',
     description: 'A modern UI/UX Portfolio Website',
     imgUrl: images.about01,
     link: 'http://click.ecc.ac.jp/ecc/letanloc/Natours/',
@@ -17,6 +19,7 @@ const listWorks = [
     tags: ['UI/UX', 'All'],
   },
   {
+    id: 2,
     title: 'Gericht Restaurant Project',
     description: 'Modern UI/UX',
     imgUrl: images.about02,
@@ -25,6 +28,7 @@ const listWorks = [
     tags: ['UI/UX', 'All'],
   },
   {
+    id: 3,
     title: 'Cool Mobile App',
     description: 'Tinder Colone in React Native',
     imgUrl: images.about03,

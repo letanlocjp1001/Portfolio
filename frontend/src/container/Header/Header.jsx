@@ -28,12 +28,14 @@ const Header = () => (
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className='p-text'>はじめまして、</p>
-            <h1 className='head-text'>レタンロック</h1>
+            <h1 className='p-text'>
+              私のモットーは「感謝気持ちを向上心に」です。このモットーは私が来日から続けている日本の学校とアルバイトで身に付きました。例えば、アルバイトを始めた頃、店長や先輩方から、丁寧に仕事を教えて頂き、また様々なフォローをして頂きました。私は感謝の気持ちと同時に「店長に近づこう！」という向上心も持つようになり、お客様はもちろん、社員の方やアルバイト仲間が何かを求めているかを考えて行動するようにしました。今までアルバイトの新人教育を任せていただけるようになりました。今後もこの精神を忘れずに仕事に取り組みたいと思います
+            </h1>
           </div>
         </div>
 
         <div className='tag-cmp app__flex'>
-          <p className='p-text'>Web Developer</p>
+          <p className='p-text'>Front End Developer</p>
           <p className='p-text'>Designer</p>
         </div>
       </div>

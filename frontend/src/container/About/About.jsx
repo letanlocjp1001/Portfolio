@@ -7,23 +7,27 @@ import { images } from '../../constants'
 
 const abouts = [
   {
-    title: 'Web Development',
-    description: 'I am a good web developers',
+    title: 'フロントエンド',
+    description:
+      '専門学校でWebプログラマーとしての基礎を学んでいます。言語は「HTML5, CSS, JavaScript, TypeScript, SCSS, React.js, Tailwindcss」、ツールはと「Visual StudioCode, Github」を主に用いて作品をしております。',
     imgUrl: images.about01,
   },
   {
-    title: 'Web Design',
-    description: 'I am a good web developers',
+    title: 'デザイナー',
+    description:
+      '私が「Illustrator, Figma, Photoshop, AfterEffects」などのアプリケーションを用いたデザインの制作です。Webデザインの仕事の中でデザインを扱えることは必要とされるシーンによって多彩な表現ができることを目指してスキルアップの勉強をしております。',
     imgUrl: images.about02,
   },
   {
     title: 'UI/UX',
-    description: 'I am a good web developers',
+    description:
+      '私がいろいろな視点でWEBページを考察し、自ら組み立てていけるようなWEBデザイナーとしてスキルアップしていきたいと考えております。',
     imgUrl: images.about03,
   },
   {
-    title: 'Web Animations',
-    description: 'I am a good web developers',
+    title: 'アニメーション',
+    description:
+      '重要な要素を動かすことで興味を引かせたり、飽きずに読み進めてもらうためのきっかけになったり、私が色々なアニメーションを勉強しております。',
     imgUrl: images.about04,
   },
 ]
@@ -32,9 +36,8 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        I Know That <span>Good Design</span>
+        できる <span>こと</span>
         <br />
-        means <span>Good Business</span>
       </h2>
       <div className='app__profiles'>
         {abouts.map((about, index) => (
@@ -49,9 +52,9 @@ const About = () => {
             <h2 className='bold-text' style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <h2 className='p-text' style={{ marginTop: 10 }}>
+            <h5 className='p-text' style={{ marginTop: 10 }}>
               {about.description}
-            </h2>
+            </h5>
           </motion.div>
         ))}
       </div>
