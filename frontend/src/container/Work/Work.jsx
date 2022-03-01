@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 
 import { motion } from 'framer-motion'
-
+import Modal from 'react-modal'
+import { Link } from 'react-router-dom'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { images } from '../../constants'
 
@@ -13,7 +14,7 @@ const listWorks = [
     id: 1,
     title: 'IT19',
     description: 'A modern UI/UX Portfolio Website',
-    imgUrl: images.about01,
+    imgUrl: images.work1,
     link: 'http://click.ecc.ac.jp/ecc/letanloc/Natours/',
     github: 'https://github.com/letanlocjp1001/Natours-SCSS',
     tags: ['UI/UX', 'All'],
@@ -96,7 +97,7 @@ const Work = () => {
                 }}
                 className='app__work-hover app__flex'
               >
-                <a href={work.link} target='_blank' rel='noreferrer'>
+                <Link to={`/${work.id}`} rel='noreferrer'>
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -105,7 +106,7 @@ const Work = () => {
                   >
                     <AiFillEye />
                   </motion.div>
-                </a>
+                </Link>
                 <a href={work.github} target='_blank' rel='noreferrer'>
                   <motion.div
                     whileInView={{ scale: [0, 1] }}

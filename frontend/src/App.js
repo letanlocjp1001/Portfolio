@@ -18,16 +18,22 @@ const App = () => (
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Header />}></Route>
+        <Route
+          path='/'
+          element={
+            <>
+              <Header />
+              <About />
+              <Work />
+              <Skills />
+              <Testimonial />
+              <Footer />
+            </>
+          }
+        ></Route>
+
+        <Route path='/:id' element={<Params />}></Route>
       </Routes>
-      <Routes>
-        <Route path='/:id/' element={<Params />}></Route>
-      </Routes>
-      <About />
-      <Work />
-      <Skills />
-      <Testimonial />
-      <Footer />
     </Router>
   </div>
 )
