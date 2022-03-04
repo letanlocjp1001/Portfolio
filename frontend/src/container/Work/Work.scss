@@ -163,6 +163,24 @@
 .modal__left {
   flex: 1;
   margin-right: 2rem;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    color: var(--secondary-color) !important;
+  }
+}
+.modal__left-text {
+  margin-bottom: 2rem;
+  p {
+    border: 1px solid var(--secondary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+  }
+  p:first-child {
+    margin-right: 1rem;
+  }
 }
 
 .modal__right {

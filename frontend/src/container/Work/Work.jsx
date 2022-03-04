@@ -24,6 +24,7 @@ const listWorks = [
     team: 'チーム制作',
     time: '20時間',
     language: 'CSS, React',
+    year: '2年後期',
   },
   {
     id: 2,
@@ -38,6 +39,7 @@ const listWorks = [
     team: 'チーム制作',
     time: '20時間',
     language: 'CSS, React',
+    year: '2年後期',
   },
   {
     id: 3,
@@ -52,6 +54,7 @@ const listWorks = [
     team: '個人制作',
     time: '20時間',
     language: 'CSS, React',
+    year: '2年後期',
   },
   {
     id: 4,
@@ -65,6 +68,7 @@ const listWorks = [
     team: '個人制作',
     time: '20時間',
     language: 'CSS, React',
+    year: '2年後期',
   },
   {
     id: 5,
@@ -78,6 +82,7 @@ const listWorks = [
     team: '個人制作',
     time: '20時間',
     language: 'CSS, React',
+    year: '2年後期',
   },
 ]
 
@@ -89,9 +94,13 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
+    border: '1px solid #313bac',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     position: 'relative',
+    boxShadow: '0 0 25px rgba(0, 0, 0, 0.2)',
+    padding: '1.5rem',
+    borderRadius: '10px',
   },
 }
 Modal.setAppElement('#root')
@@ -213,9 +222,20 @@ const Work = () => {
                   {filterWork2.map((work) => (
                     <div key={work.id} className='app__flex'>
                       <div className='modal__left'>
-                        <h1>{work.title}</h1>
-                        <p>{work.description}</p>
-                        <p>{work.team}</p>
+                        <h1 className='head-text modal__left-title'>
+                          {work.title}
+                        </h1>
+                        <div className='app__flex modal__left-text'>
+                          <p className='bold-text modal-text'>{work.team}</p>
+                          <p className='bold-text'>{work.year}</p>
+                        </div>
+                        <h5 className='bold-text modal__left-title'>
+                          サービス
+                        </h5>
+                        <p className='p-text'>{work.description}</p>
+                        <h5 className='bold-text modal__left-title'>
+                          言語・ツール
+                        </h5>
                         <p>{work.language}</p>
                       </div>
 
