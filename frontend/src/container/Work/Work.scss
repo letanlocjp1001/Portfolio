@@ -130,7 +130,7 @@
   position: relative;
 
   h4 {
-    margin-top: 1rem;
+    margin-top: 0.5srem;
     line-height: 1.5;
   }
 
@@ -151,11 +151,23 @@
   color: #000;
   font-weight: 800;
   transition: all 0.3s ease;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
   border: none;
 
   &:hover {
     background-color: var(--secondary-color);
     color: #fff;
+  }
+}
+
+.modal__left {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.modal__right {
+  flex: 1;
+  img {
+    width: 80%;
   }
 }

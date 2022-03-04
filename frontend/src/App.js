@@ -31,8 +31,6 @@ const App = () => (
             </>
           }
         ></Route>
-
-        <Route path='/:id' element={<Params />}></Route>
       </Routes>
     </Router>
   </div>

@@ -7789,10 +7789,10 @@ react-modal@^3.14.4:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-parallax-tilt@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.6.1.tgz#459d3aec2fb4f7a38b1460f5a962e277540c9345"
-  integrity sha512-XK8v2BaD5tK+ewFG/D6XAFGanb5Dao4oCQDuMEZ4dtC8/w0SrGA55hXh+efg90F9l1UaosE9war71USOJNF43w==
+react-parallax-tilt@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.6.2.tgz#fc2675f593c1398be015f8ac77f745990a35c621"
+  integrity sha512-POsENy6nFNLEue/HriJb0yZtDND7Bztff9Uq08EKujxNoFxCQxjRVVoZnRKaOYw2UgQt3kYluXYFt2TicRSBAw==
 
 react-refresh@^0.11.0:
   version "0.11.0"
