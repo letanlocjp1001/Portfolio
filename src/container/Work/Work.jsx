@@ -1,90 +1,15 @@
 import React, { useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
+import { FaTimes } from 'react-icons/fa'
 
 import { motion } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
 
 import Modal from 'react-modal'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { images } from '../../constants'
 
+import listWorks from './data'
 import './Work.scss'
-
-const listWorks = [
-  {
-    id: 1,
-    title: 'IT19',
-    description:
-      'IT19とは、ITインフラについて学んでいただくことでITインフラの技術者を増やし、IT業界を盛り上げていきたいという思いを実現した教育関連サービスです。IT19を通して学んだことを未来へ繋いでいき、より良い世の中を作るために、あなたも「ITインフラを支える1人 」になりませんか？',
-    imgUrl: images.work1,
-    imgMac: images.mac2,
-    link: 'http://click.ecc.ac.jp/ecc/letanloc/it19/',
-    github: 'https://github.com/letanlocjp1001/IT_19',
-    tags: ['Web App', 'All'],
-    team: 'チーム制作',
-    time: '20時間',
-    language: 'CSS, React',
-    year: '2年後期',
-  },
-  {
-    id: 2,
-    title: 'Moment × Memorie',
-    description:
-      'moment × memoryは パーティを行う人たち(主催者)と パーティを盛り上げる人たち(パフォーマー)を マッチングさせるサービスになっています。 主に結婚式、社内パーティを 予定されている方は是非ともご利用ください',
-    imgUrl: images.work2,
-    imgMac: images.mac2,
-    link: 'http://click.ecc.ac.jp/ecc/letanloc/Portfolio/work/Project_01/MomentMemorie/',
-    github: 'https://github.com/letanlocjp1001/MomentMemorie',
-    tags: ['Web App', 'Mobile App', 'All'],
-    team: 'チーム制作',
-    time: '20時間',
-    language: 'CSS, React',
-    year: '2年後期',
-  },
-  {
-    id: 3,
-    title: 'エンジニアにポートフォリオ',
-    description:
-      '二代目のポートフォリオを作成して、フロントエンドエンジニアを志望のため、アニメーションよくやっています。言語も変更できます。',
-    imgUrl: images.logo,
-    imgMac: images.mac1,
-    link: 'https://letanlocportfolio.netlify.app/',
-    github: 'https://github.com/letanlocjp1001/React-Portfolio',
-    tags: ['React JS', 'All'],
-    team: '個人制作',
-    time: '20時間',
-    language: 'CSS, React',
-    year: '2年後期',
-  },
-  {
-    id: 4,
-    title: 'Movie Mobile App',
-    description: 'React Native',
-    imgUrl: images.work4,
-    imgMac: images.mac1,
-    link: 'http://click.ecc.ac.jp/ecc/letanloc/Natours/',
-    github: 'https://github.com/letanlocjp1001/Natours-SCSS',
-    tags: ['Mobile App', 'All'],
-    team: '個人制作',
-    time: '20時間',
-    language: 'CSS, React',
-    year: '2年後期',
-  },
-  {
-    id: 5,
-    title: 'Cool Mobile App',
-    description: 'Tinder Colone in React Native',
-    imgUrl: images.work4,
-    imgMac: images.mac1,
-    link: 'http://click.ecc.ac.jp/ecc/letanloc/Natours/',
-    github: 'https://github.com/letanlocjp1001/Natours-SCSS',
-    tags: ['Mobile App', 'All'],
-    team: '個人制作',
-    time: '20時間',
-    language: 'CSS, React',
-    year: '2年後期',
-  },
-]
 
 const customStyles = {
   content: {
@@ -219,35 +144,69 @@ const Work = () => {
                   contentLabel='More'
                   className='app__flex'
                 >
-                  {filterWork2.map((work) => (
-                    <div key={work.id} className='app__flex'>
-                      <div className='modal__left'>
-                        <h1 className='head-text modal__left-title'>
-                          {work.title}
-                        </h1>
-                        <div className='app__flex modal__left-text'>
-                          <p className='bold-text modal-text'>{work.team}</p>
-                          <p className='bold-text'>{work.year}</p>
+                  <div className='app__flex'>
+                    {filterWork2.map((work) => (
+                      <div key={work.id} className='app__flex'>
+                        <div className='modal__left'>
+                          <h1 className='head-text modal__left-title'>
+                            {work.title}
+                          </h1>
+                          <div className='app__flex modal__left-text'>
+                            <p className='bold-text'>{work.team}</p>
+                            <p className='bold-text'>{work.year}</p>
+                            <p className='bold-text'>{work.time}</p>
+                          </div>
+                          <h5 className='bold-text modal__left-title'>
+                            サービス
+                          </h5>
+                          <p className='p-text'>{work.description}</p>
+                          <h5 className='bold-text modal__left-title'>言語</h5>
+                          <p className='p-text'>{work.language}</p>
+                          <h5 className='bold-text modal__left-title'>
+                            ツール
+                          </h5>
+                          <p className='p-text'>{work.tools}</p>
                         </div>
-                        <h5 className='bold-text modal__left-title'>
-                          サービス
-                        </h5>
-                        <p className='p-text'>{work.description}</p>
-                        <h5 className='bold-text modal__left-title'>
-                          言語・ツール
-                        </h5>
-                        <p>{work.language}</p>
-                      </div>
 
-                      <div className='modal__right'>
-                        <img src={work.imgMac} alt={work.title} />
-                        <p>{work.time}</p>
+                        <div className='modal__right'>
+                          <img src={work.imgMac} alt={work.title} />
+                          <ul>
+                            <li>
+                              <h5 className='bold-text modal__left-title'>
+                                WebSite
+                              </h5>
+                              <a
+                                href={work.link}
+                                rel='noreferrer'
+                                target='_blank'
+                                className='p-text'
+                              >
+                                {work.link}
+                              </a>
+                            </li>
+                            <li>
+                              <h5 className='bold-text modal__left-title'>
+                                Github
+                              </h5>
+                              <a
+                                href={work.github}
+                                target='_blank'
+                                rel='noreferrer'
+                                className='p-text'
+                              >
+                                {work.github}
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                  <button className='btn' onClick={closeModal}>
-                    X
-                  </button>
+                    ))}
+                  </div>
+                  <div className='modal__icon'>
+                    <button className='btn' onClick={closeModal}>
+                      <FaTimes fontSize={24} />
+                    </button>
+                  </div>
                 </Modal>
               </Tilt>
             </div>

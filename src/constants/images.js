@@ -39,8 +39,9 @@ import work2 from '../assets/work2.svg'
 import work3 from '../assets/work3.png'
 import work4 from '../assets/work4.png'
 import work5 from '../assets/work5.svg'
-import mac1 from '../assets/mac1.svg'
+import mac1 from '../assets/mac1.png'
 import mac2 from '../assets/mac2.png'
+import mac3 from '../assets/mac3.png'
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
@@ -79,4 +80,5 @@ export default {
   work5,
   mac1,
   mac2,
+  mac3,
 }
