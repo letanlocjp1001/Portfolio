@@ -173,7 +173,7 @@ const Work = () => {
                           <ul>
                             <li>
                               <h5 className='bold-text modal__left-title'>
-                                WebSite
+                                サイト
                               </h5>
                               <a
                                 href={work.link}
