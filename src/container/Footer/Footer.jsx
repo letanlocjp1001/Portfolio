@@ -18,14 +18,6 @@ const Footer = () => {
   }
 
   const handleSubmit = (e) => {
-    setLoading(true)
-
-    const contact = {
-      _type: 'contact',
-      name: name,
-      email: email,
-      message: message,
-    }
     setLoading(false)
   }
   return (
