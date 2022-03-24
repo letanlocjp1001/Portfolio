@@ -159,6 +159,16 @@
   }
 }
 
+.app__modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+}
+
 .modal__left {
   flex: 1;
   p {
@@ -181,13 +191,21 @@
 
 .modal__right {
   flex: 1;
-
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
   img {
     width: 90%;
+    @media screen and (max-width: 900px) {
+      width: 50%;
+    }
   }
 
   li {
     padding: 0.5rem 1rem;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
@@ -197,5 +215,15 @@
 }
 .modal__icon {
   position: relative;
-  top: -45%;
+  top: -49%;
+  right: -1%;
+
+  @media screen and (max-width: 900px) {
+    top: 0;
+    right: -48%;
+  }
+  @media screen and (max-width: 600px) {
+    top: -3%;
+    right: -48%;
+  }
 }

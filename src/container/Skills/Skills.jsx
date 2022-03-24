@@ -19,24 +19,34 @@ const skills = [
 const experience = [
   {
     id: 1,
-    year: 2020,
-    name: 'Frontend Developer',
-    company: 'ECC コンピュータ専門学校',
-    desc: '勉強しています',
+    year: 2017,
+    name: '日本語',
+    company: '大阪バイオメディカル専門学校日本語学科',
+    desc: '日本語を勉強しました。',
   },
+
   {
     id: 2,
-    year: 2021,
-    name: 'Frontend Developer',
-    company: 'ECC コンピュータ専門学校',
-    desc: '勉強しています',
+    year: 2019,
+    name: '日本文化',
+    company: '大阪バイオメディカル専門学校日本文化教養学科',
+    desc: '日本の文化を勉強しました。',
+  },
+  {
+    id: 3,
+    year: 2020,
+    name: 'フロントエンド　エンジニア',
+    company: 'ECC コンピュータ専門学校マルチメディア研究学科WEBデザイン',
+    desc: 'ウェブデザインを勉強しています',
   },
 ]
 
 const Skills = () => {
   return (
     <>
-      <h2 className='head-text'>Skills & Experience</h2>
+      <h2 className='head-text'>
+        スキル & <span>経験</span>
+      </h2>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
           {skills.map((skill) => (
