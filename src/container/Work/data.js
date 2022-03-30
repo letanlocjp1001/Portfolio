@@ -63,7 +63,7 @@ const listWorks = [
     time: '３０時間',
     language: 'HTML, SCSS',
     tools: 'XD, Photoshop, Illustrator',
-    year: '2年後期',
+    year: '１年後期',
   },
 ]
 export default listWorks
