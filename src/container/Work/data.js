@@ -40,7 +40,7 @@ const listWorks = [
       '二代目のポートフォリオを作成して、フロントエンドエンジニアを志望のため、アニメーションよくやっています。言語とテーマも変更できます。',
     imgUrl: images.logo,
     imgMac: images.mac3,
-    link: 'https://letanlocportfolio.netlify.app/',
+    link: 'https://letanlocportfolio2.netlify.app/',
     github: 'https://github.com/letanlocjp1001/React-Portfolio',
     tags: ['React JS', 'All'],
     team: '個人制作',
